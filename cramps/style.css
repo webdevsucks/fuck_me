@@ -1,0 +1,86 @@
+/*a fresh start*/
+
+
+
+#heading
+{
+ font-size: 300%;
+ text-align: center;
+}
+
+#box1
+{
+width: 500px;
+border: 1px solid red;
+}
+.right
+{
+float: right;
+}
+
+.left
+{
+float:left;
+}
+
+.center
+{
+ /*text-align:center;*/
+ /*I guess width isn't required*/
+ margin: auto;
+ 
+}
+
+/*basically do something about the heights before you do anything*/
+.wrap1
+{
+/*width: 1000px;*/
+width: screen.width;/*100%;/*screen.width;*/
+height: 200px;
+/*height:screen.height;*/
+border: 2px solid green;
+
+}
+
+.wrap2
+{
+width:30%;
+height: auto;
+border: 2px solid orange;
+float: left;
+margin-right: 25px;
+}
+
+.wrap3
+{
+  width: 50%;
+  float: left;
+  margin-left: 25px;
+  padding-left: 75px;
+  border: 2px solid purple;
+  height: auto;
+}
+
+#chatbox
+{
+  width: 80%;
+   /*margin: 0 auto;*/
+   float:right;
+   border: 2px solid red;
+}
+
+#chat
+{
+  
+}
+
+#t1, th, td
+{
+ font-size: 150%;
+ width: 98%;
+ /*height: 50%;*/
+ border: 1px solid blue;
+ border-collapse: collapse;
+ /*background-color: yellow;*/
+ 
+}
