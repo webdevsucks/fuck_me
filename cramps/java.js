@@ -11,6 +11,7 @@ function loadDoc()
 {
 
 var form  = document.forms['f1'];
+var formData = new FormData(form);
 var str = form.word.value;
 
 
@@ -28,5 +29,5 @@ document.getElementById("heading").innerHTML = xhttp.responseText;
 //xhttp.send();
 xhttp.open("POST","../wsgi/app.py",true);
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xhttp.send(form); //can not get it to work with forms yet
+xhttp.send(formData); //can not get it to work with forms yet
 }
