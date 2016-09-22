@@ -27,7 +27,7 @@ document.getElementById("heading").innerHTML = xhttp.responseText;
 
 //xhttp.open("GET","../wsgi/app.py?q="+str,true);
 //xhttp.send();
-xhttp.open("POST","../wsgi/app.py",true);
+xhttp.open("POST","http://localhost:8080",true);
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send(formData); //can not get it to work with forms yet
 }
