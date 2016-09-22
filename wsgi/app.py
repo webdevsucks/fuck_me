@@ -12,12 +12,12 @@ def application(environ, start_response):
         post_env['QUERY_STRING'] = ''
         form = cgi.FieldStorage(fp=environ['wsgi.input'],environ=post_env,keep_blank_values=True)
         #output = b''+form["word"].value
-        output = str(form.getvalue('word'))
-        output = str.encode(output)
+        #output = form.getvalue('word')
+        #output = str.encode(output) 
         content_length = int(environ['CONTENT_LENGTH'])
-##        output = environ['wsgi.input'].read(content_length)
-##        fields = request.parse_formvars(environ)
-##        field = fields['word']
+        output = environ['wsgi.input'].read(content_length)
+        fields = request.parse_formvars(environ)
+        field = fields['word']
 ##        output = str.encode(fields)
         #temp = parse_qs(output)
         #temp = parse_qs(environ['QUERY_STRING'])
@@ -36,7 +36,7 @@ def application(environ, start_response):
 if __name__ == '__main__':
     try:
         from wsgiref.simple_server import make_server
-        httpd = make_server('localhost/wsgi', 8080, app)
+        httpd = make_server('localhost', 8080, app)
         print('Serving on port 8080...')
         httpd.serve_forever()
     except KeyboardInterrupt:
